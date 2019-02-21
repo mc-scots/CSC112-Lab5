@@ -1,87 +1,77 @@
-## The Story of Ed
+# Dazzling Fractals
+In this lab, you will play around with one of the most popular types
+of computer art...the fractal!
 
-Ed was a big fan of the game "hangman". Unfortunately, Ed was in his mid
-30's and none of his age peers seemed to like the game as much as he
-did. So he set out to make a computer game so he could play all by
-himself. Poking around his Linux system, he found the dictionary file
-which is used by ispell to spell check text files. This file contained
-all the words in the English language, even the ones that no one uses,
-such as
-"[catabaptist](https://www.merriam-webster.com/dictionary/catabaptist)".
-He decided that armed with this, he should be able to create a nifty
-program which used the widget library he had so much fun with back when
-he took CSC112 at Maryville College.
+A fractal is a geometric shape where each part has the same
+statistical characteristic of the whole.  There are a lot of examples
+of fractals, and the most beautiful ones are computer generated.
+While they may look complex, they are really just recurrent iterations
+of very simple properties.  They may be drawn using points, lines, or
+sometimes even geometric shapes.  
 
-He vaguely remembered something about the necessity of having a good
-design, but he didn't quite remember how to properly carry out UML
-modeling. Instead, he took out a sheet of paper and designed the game
-screen, the gallows figure, and the sequence. Ed's design is shown in
-the thumbnail on this page.
+In this lab, you will be drawing three fractals.  The starter program
+provides the basic interface, and it is up to you and your partner to
+provide the code that draws the fractals.  Feel free to experiment,
+for instance you may want to create an interface which allows the user
+to specify the parameters of the fractal to be generated.  You may
+also want to play with animation.  If you do extra work, I will award
+extra points to the programming assignments category of your grade.
 
-![Ed's Design](paperDesign.jpg
-"Ed's Design")
+Also, for this lab we will be exploring the agile methodology of pair
+programming.  
 
-Ed took his "design" and set out to build the things he would need. He
-clearly knew that he would need the following:
+This lab will be done in the following stages:
 
-  - Word - randomly choose a word from the "words" file. This widget
-    draws blanks and correct letters.
-  - Gallows - Show the hanging man in his current state.
-  - Letters - Show all the guessed letters.
+1. Find a partner and view the Pair Programming Video.
+3. Select a Fractal.
+4. Get the starter program running in an environment of your choosing.
+5. Change the button text to match the fractals you are using. 
+6. Implement your fractals.
+7. Push everything back to GitHub.
 
-Ed then set out to code these widgets. He created each one, and created
-a test program to test each one. Then he created a Makefile which
-compiled all of this programs for him. After testing his widgets and
-verifying that the worked correctly, he then set out to put his objects
-together into a complete game.
+## Pair Programming
+The first thing to explore in this lab is pair programming.  We will
+be using this on a few other labs this semester, and it really does
+make the time go faster.  The basic idea is that you will have two
+programmers using one computer.  One programmer is the "driver" (the
+one doing the coding) and the other one is the "navigator".  The
+navigator reads the code as the driver is coding and offers
+suggestions and advice.  Throughout a pair programming session, each
+person trades roles.  For a more complete introduction to this coding
+technique, please see the video: https://youtu.be/A6kdFdJp4jY
 
-When Ed tried to build the finished game, he got stuck\! His "design"
-didn't give him enough information to really build the program. His
-pieces worked, but he didn't have a way to make them work together\! If
-only Ed had carried out a correct process\! Luckily, he has us, and
-we're going to give him a good design.
+## Selecting Your Fractals
+Many possibilities exist for which fractals you can draw.  Some are
+easier than others, but they are all achievable with a little bit of
+effort.  Some use points, some use lines, they are all a lot of fun!
+Some examples of possible places to look for guidance on how to
+generate the fractals are found below:
 
-## How to Play Hangman
+* Mandelbrot Set: https://gist.github.com/GiorgioRegni/571688
+* Julia Set: https://en.wikipedia.org/wiki/Julia_set
+* Hilbert Curve: https://en.wikipedia.org/wiki/Hilbert_curve
+* Koch Snowflake: http://www.csc.twu.ca/rsbook/Ch18/Ch18.4.html
+* Sierpinski Triangle: https://www.geeksforgeeks.org/sierpinski-triangle/
+* Other Fractal Ideas: https://en.wikipedia.org/wiki/Fractal
 
-Ok, so at this point, I should mention how this game is played. Hangman
-is a letter guessing game, where you draw the a number of blanks
-indicating the number of letters in the word. The other player then
-guesses letters. If they guess a letter in the word, you write that
-letter in every blank where it appears. If they guess incorrectly, you
-draw a part of a stick figure hanging from a gallows. Once the stick
-figure is complete, the guesser loses. Now that I think about it, this
-bit of innocent childhood fun is kind of dark and chilling. What's wrong
-with us?\! Anyway, let's continue\! If the word is complete, the guesser
-wins.
+You can select any of these, or find your own if you have a favorite.
 
-There are many variants of how to draw the stick figure, but typically
-it consists of 6 parts in this order:
+## Change Your Button Text
+This step is pretty self explanatory.  Simply change the text on the
+buttons to reflect your fractals' names.
 
-1.  head
-2.  body
-3.  left arm
-4.  right arm
-5.  left leg
-6.  right leg
 
-Some people, including Ed, draw a face on the figure when the right leg
-is drawn. Ed's attempt at implementing the game does this too\!
+## Implement Your Fractals
+By default, the code provided in this lab simply draws colored boxes.
+You want to modify the fractal pane drawing functions so that they
+draw your fractals instead.  You should just have modify those three
+functions, you can leave the rest of the program alone (unless you
+choose to do some extra work, of course).  
 
-## Your Task
+Please do study the rest of the program to understand how it works,
+however.
 
-Look at the code in the lab4 folder. This code contains Ed's original
-code, along with all his test programs. Compile and run these programs
-and make sure you understand what each item does. Now, follow through
-with these steps:
-
-1.  Draw class diagrams of Ed's Widgets as they currently exist.
-2.  Draw a Use-Case diagram for the hangman game.
-3.  Carry out the rest of the OOAD process, drawing the requisite
-    diagrams.
-4.  After you have completed and corrected Ed's design, upload png
-    images of all your diagrams to your lab folder.
-
-You will be graded on how well you model the task. Remember to adhere to
-good OOP principles. You'll want to put a lot of effort into this
-because your next programming assignment will be to modify Ed's code and
-produce the fully integrated game.
+## Push Everything to Github
+Be sure to put both your names in the fractals.cpp file.  You will
+only need to push one copy, however feel free to upload to both of
+your repos.
